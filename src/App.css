@@ -1,12 +1,33 @@
 .nav-li li{
   display: inline-block;
   padding: 20px;
+
 }
 .nav-li a{
   text-decoration: none;
   color: aliceblue;
 }
+.nav-li a:hover{
+  color: blue;
+}
+.nav-li li:hover{
+  background-color: lightslategrey;
+}
+.nav-li{
+  margin: 0%;
+}
 .navdiv{
   background-color:black;
   padding-left: 60px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: black;
+  color: rgb(230, 228, 80);
+  display:inline-block;
+  height: 70px;
 }
