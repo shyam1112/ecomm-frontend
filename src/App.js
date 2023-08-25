@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from "./Home"
 import Add from './Add'
-import Update from './Update'
-import Login from './Login'
-import Logout from './Logout'
-import Profile from './Profile'
+import Update from './components/Update'
+import Login from './components/Login'
+import Profile from './components/Profile'
 import Footer from './components/Footer';
+import Signup from './components/Signup'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path='/add' element={<Add />}/>
         <Route path='/update' element={<Update />}/>
         <Route path='/login' element={<Login />}/>
-        <Route path='/logout' element={<Logout />}/>
+        <Route path='/signup' element={<Signup />}/>
         <Route path='/profile' element={<Profile />}/>
 
       </Routes>

@@ -8,7 +8,7 @@
   color: aliceblue;
 }
 .nav-li a:hover{
-  color: blue;
+  color: rgb(255, 217, 0);
 }
 .nav-li li:hover{
   background-color: lightslategrey;
@@ -17,16 +17,36 @@
   margin: 0%;
 }
 .navdiv{
-  background-color:black;
+  background-color:rgb(20, 115, 125);
   padding-left: 60px;
 }
 
+.signup{
+  margin-left: 300px;
+}
+.inputBox{
+    display: block;
+    margin: 20px;
+    width: 50%;
+    padding: 10px;
+  background-color: rgb(254, 243, 201);
+}
+
+.signupbtn{
+  background-color: aquamarine;
+  margin-left: 150px;
+  width: 200px;
+}
+.signupbtn:hover{
+  background-color: rgb(116, 116, 236);
+}
+
 .footer{
-  position: absolute;
+  position:relative;
   bottom: 0;
   text-align: center;
   width: 100%;
-  background-color: black;
+  background-color:rgb(20, 115, 125);
   color: rgb(230, 228, 80);
   display:inline-block;
   height: 70px;
