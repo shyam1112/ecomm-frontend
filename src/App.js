@@ -4,10 +4,11 @@ import Nav from './components/Nav';
 import Home from "./Home"
 import Add from './Add'
 import Update from './components/Update'
-import Login from './components/Login'
 import Profile from './components/Profile'
 import Footer from './components/Footer';
 import Signup from './components/Signup'
+import PrivateCmp from './components/PrivateCmp';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -15,13 +16,14 @@ function App() {
       <BrowserRouter>
       <Nav />
       <Routes>
+        <Route element={<PrivateCmp/>}>
         <Route path='/' element={<Home />} />
         <Route path='/add' element={<Add />}/>
         <Route path='/update' element={<Update />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/signup' element={<Signup />}/>
         <Route path='/profile' element={<Profile />}/>
-
+        </Route>
+        <Route path='/signup' element={<Signup />}/>
+        <Route path='/login' element={<Login />} />
       </Routes>
       <Footer />
       </BrowserRouter>

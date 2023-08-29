@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Signup(){
@@ -8,8 +8,15 @@ function Signup(){
     const [email,setemail]=useState("");
     const [pass,setpass]=useState("");
     
+
+    useEffect(()=>{
+        const auth=localStorage.getItem('user');
+        if(auth){
+            navigate("/");
+        }
+    })
     const collectData= async ()=>{
-        console.log(name,email,pass);
+        // console.log(name,email,pass);
         let result= await fetch('http://localhost:5000/register',{
             method:'post',
             body:JSON.stringify({name,email,pass}),
@@ -18,14 +25,14 @@ function Signup(){
             },
         });
         result=await result.json();
-        console.warn(result);
-        if(result){
-            navigate('/');
-        }
+        // console.warn(result);
+        localStorage.setItem("user",JSON.stringify(result));
+        navigate('/');
 
     }
     return(
         <div>
+                        <br/>
             <div className="signup">
             <h1>Sign-Up</h1>
             <input className="inputBox" type="text" placeholder="Enter Your Name "
@@ -36,7 +43,6 @@ function Signup(){
             value={pass} onChange={(e)=>{setpass(e.target.value)}}/>
             <button onClick={collectData} className="signupbtn" >Signup</button>
             </div>
-            <br/>
             <br/>
             <br/>
             <br/>
