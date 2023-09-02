@@ -49,7 +49,31 @@
     padding: 10px;
   background-color: rgb(254, 243, 201);
 }
-
+.product ul li{
+  display: inline-block;
+  border: 2px solid skyblue;
+  padding: 6px;
+  width: 150px;
+  text-align: center;
+  margin:3px;
+}
+.product{
+  margin-left: 0px;
+}
+.product ul{
+  padding-left: 100px;
+  margin-bottom: 0%;
+}
+.operation{
+  background-color: antiquewhite;
+}
+.invalid-input{
+display: block;
+margin-left: 20px;
+color: red;
+margin-top:-25px;
+font-size: smaller;
+}
 .signupbtn{
   background-color: aquamarine;
   margin-left: 150px;
@@ -68,4 +92,5 @@
   color: rgb(230, 228, 80);
   display:inline-block;
   height: 70px;
+  flex-shrink: 0;
 }

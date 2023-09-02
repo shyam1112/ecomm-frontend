@@ -19,7 +19,7 @@ function App() {
         <Route element={<PrivateCmp/>}>
         <Route path='/' element={<Home />} />
         <Route path='/add' element={<Add />}/>
-        <Route path='/update' element={<Update />}/>
+        <Route path='/update/:id' element={<Update />}/>
         <Route path='/profile' element={<Profile />}/>
         </Route>
         <Route path='/signup' element={<Signup />}/>
