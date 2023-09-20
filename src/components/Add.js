@@ -17,7 +17,7 @@ function Add() {
             return false;
         }
 
-        let result = await fetch('http://localhost:5000/addproduct', {
+        let result = await fetch('https://royal-backend-seller.onrender.com/addproduct', {
             method: 'post',
             body: JSON.stringify({ name, price, category, company, img, size,color1,color2,color3 }),
             headers: {

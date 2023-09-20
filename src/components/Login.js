@@ -12,7 +12,7 @@ function Login(){
     const [pass,setpass]=useState("");
     const loginData= async ()=>{
         // console.warn(email,pass);
-        let result= await fetch('http://localhost:5000/login',{
+        let result= await fetch('https://royal-backend-seller.onrender.com/login',{
             method:'post',
             body:JSON.stringify({email,pass}),
             headers:{

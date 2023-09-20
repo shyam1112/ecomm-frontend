@@ -8,13 +8,13 @@ function Home() {
     }, []);
 
     const getData = async () => {
-        let result = await fetch("http://localhost:5000/products");
+        let result = await fetch("https://royal-backend-seller.onrender.com/products");
         result = await result.json();
         setProduct(result);
     }
 
     const deleteitem = async (id) => {
-        let result = await fetch(`http://localhost:5000/products/${id}`, {
+        let result = await fetch(`https://royal-backend-seller.onrender.com/products/${id}`, {
             method: "delete"
         });
         result = await result.json();
@@ -28,7 +28,7 @@ function Home() {
         let key = event.target.value;
         if (key) {
 
-            let result = await fetch(`http://localhost:5000/search/${key}`);
+            let result = await fetch(`https://royal-backend-seller.onrender.com/search/${key}`);
             result = await result.json();
             if (result) {
                 setProduct(result);

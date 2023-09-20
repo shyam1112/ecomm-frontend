@@ -16,7 +16,7 @@ function Update() {
     },[]);
 
     const getData=async()=>{
-        let result=await fetch(`http://localhost:5000/products/${params.id}`);
+        let result=await fetch(`https://royal-backend-seller.onrender.com/products/${params.id}`);
         result=await result.json();
         console.log(result);
         setname(result.name);
@@ -25,7 +25,7 @@ function Update() {
         setcompany(result.company);
     }
     const updateData=async()=>{
-        let result= await fetch(`http://localhost:5000/products/${params.id}`,{
+        let result= await fetch(`https://royal-backend-seller.onrender.com/products/${params.id}`,{
             method:'Put',
             body:JSON.stringify({name,price,category,company}),
             headers:{
