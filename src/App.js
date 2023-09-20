@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Signup from './components/Signup'
 import PrivateCmp from './components/PrivateCmp';
 import Login from './components/Login';
+import Productimg from './components/Productimg';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/add' element={<Add />}/>
         <Route path='/update/:id' element={<Update />}/>
         <Route path='/profile' element={<Profile />}/>
+        <Route path='/productimg' element={<Productimg />} />
         </Route>
         <Route path='/signup' element={<Signup />}/>
         <Route path='/login' element={<Login />} />

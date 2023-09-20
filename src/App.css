@@ -47,6 +47,7 @@
   border: 2px solid rgb(145, 93, 15);
   padding: 5px;
   margin-bottom: 10px;
+  width: 500px;
 
 }
 .inputBox{
@@ -54,23 +55,30 @@
     margin: 20px;
     width: 50%;
     padding: 10px;
-  background-color: rgb(254, 243, 201);
+    background-color: rgb(254, 243, 201);
 }
 .product ul li{
   display: inline-block;
   border: 2px solid skyblue;
-  padding: 6px;
+  padding: 3px;
   width: 150px;
   text-align: center;
   margin:3px;
+
 }
 .product{
   margin-left: 0px;
   text-align: center;
 }
 .product ul{
-  padding-left: 100px;
+  padding-left: 0px;
   margin-bottom: 0%;
+  /* padding-right: 200px; */
+  display: inline-flex;
+}
+
+.product ul li img{
+  width: 150px;
 }
 .operation{
   background-color: antiquewhite;

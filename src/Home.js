@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 function Home() {
     const [product, setProduct] = useState();
 
@@ -30,7 +29,7 @@ function Home() {
         if (key) {
 
             let result = await fetch(`http://localhost:5000/search/${key}`);
-            result=await result.json();
+            result = await result.json();
             if (result) {
                 setProduct(result);
             }
@@ -48,24 +47,64 @@ function Home() {
                 <li><strong>Price</strong></li>
                 <li><strong>Category</strong></li>
                 <li><strong>Company</strong></li>
+                <li><strong>Size</strong></li>
+                <li><strong>Color1</strong></li>
+                <li><strong>Color2</strong></li>
+                <li><strong>Color3</strong></li>
+
+
+
                 <li style={{ width: 300 }}><strong>Operation</strong></li>
+                <li><strong>Image</strong></li>
             </ul>
-            {
-                product.length>0 ?product?.map((item, index) =>
+            {product && product.length > 0 ? (
+                product.map((item, index) => (
                     <ul key={item._id}>
                         <li>{index + 1}</li>
                         <li>{item.name}</li>
                         <li>{item.price}</li>
                         <li>{item.category}</li>
                         <li>{item.company}</li>
-                        <li className="operation"><button style={{}} onClick={() => deleteitem(item._id)}>Delete</button></li>
-                        <li className="operation"><Link to={"/update/" + item._id}>Update</Link></li>
+                        <li>{item.size}</li>
+                        <li><div
+                            style={{
+                                backgroundColor: `${item.color1}`,
+                                width: "130px",
+                                height: "120px",
+                            }}
+                        >{item.color1}</div></li>
+                         <li><div
+                            style={{
+                                backgroundColor: `${item.color2}`,
+                                width: "130px",
+                                height: "120px",
+                            }}
+                        >{item.color2}</div></li>
+                        <li><div
+                            style={{
+                                backgroundColor: `${item.color3}`,
+                                width: "130px",
+                                height: "120px",
+                            }}
+                        >{item.color3}</div></li>
+                        <li className="operation">
+                            <button style={{}} onClick={() => deleteitem(item._id)}>
+                                Delete
+                            </button>
+                        </li>
+                        <li className="operation">
+                            <Link to={"/update/" + item._id}>Update</Link>
+                        </li>
+                        <li><img src={item.img} alt="img" style={{ width: "600" }} /></li>
                     </ul>
-                )
-                :
+                ))
+            ) : (
                 <h1>No result found.</h1>
-            }
+            )}
+
+
         </div>
+
     )
 }
 export default Home;
