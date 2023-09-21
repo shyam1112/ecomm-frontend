@@ -18,7 +18,7 @@ function Nav() {
                         <li className="item"><Link to='/update'>Update product</Link></li>
                         <li className="item"><Link to='/Profile'>Profile</Link></li>
                         <li className="item"><Link to='/order'>Order</Link></li>
-                        <li className="item" > <Link onClick={logout} to='/signup'>Logout ({JSON.parse(auth).name})</Link> </li>
+                        <li className="item" > <Link onClick={logout} to='/signup'>Logout </Link> </li>
                     </ul>:
                     <div className="nav-li navright">
                     <Link to='/signup'>Sign-up</Link>&nbsp;&nbsp;&nbsp;&nbsp;
