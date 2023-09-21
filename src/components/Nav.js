@@ -1,5 +1,5 @@
 import { Link, Navigate, useNavigate } from "react-router-dom";
-
+import logo from './logo.jpg'
 function Nav() {
     const auth = localStorage.getItem('user');
     const navigate = useNavigate();
@@ -9,7 +9,7 @@ function Nav() {
     }
     return (
         <div>
-            <img alt="logo" className="logo" src="https://scontent.fbom19-3.fna.fbcdn.net/v/t39.30808-6/300794579_421759580020244_753011159807902456_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=HjPvBkNODnUAX_-mvYC&_nc_ht=scontent.fbom19-3.fna&oh=00_AfAkkvzz5AhPZD4CQYY2G1znUJ5tJO8xeew-qwb5AUpEow&oe=64F28D69"/>
+            <img alt="logo" className="logo" src={logo}/>
             <div className="navdiv">
                 {
                     auth?<ul className="nav-li">
