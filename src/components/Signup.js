@@ -15,6 +15,8 @@ function Signup(){
             navigate("/");
         }
     })
+
+
     const collectData= async ()=>{
         // console.log(name,email,pass);
         let result= await fetch('https://royal-backend-seller.onrender.com/register',{
@@ -28,7 +30,6 @@ function Signup(){
         // console.warn(result);
         localStorage.setItem("user",JSON.stringify(result));
         navigate('/');
-
     }
     return(
         <div>

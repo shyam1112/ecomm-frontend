@@ -21,7 +21,7 @@ function Nav() {
                         <li className="item" > <Link onClick={logout} to='/signup'>Logout </Link> </li>
                     </ul>:
                     <div className="nav-li navright">
-                    <Link to='/signup'>Sign-up</Link>&nbsp;&nbsp;&nbsp;&nbsp;
+                    {/* <Link to='/signup'>Sign-up</Link>&nbsp;&nbsp;&nbsp;&nbsp; */}
                     <Link to='/login'>Login</Link>
                 </div>
 

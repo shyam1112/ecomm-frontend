@@ -12,16 +12,17 @@ function Login(){
     const [pass,setpass]=useState("");
     const loginData= async ()=>{
         // console.warn(email,pass);
-        let result= await fetch('https://royal-backend-seller.onrender.com/login',{
-            method:'post',
-            body:JSON.stringify({email,pass}),
-            headers:{
-                'content-type':'application/json'
-            },
-        });
-        result=await result.json();
-        if(result.name){
-            localStorage.setItem("user",JSON.stringify(result));
+        // let result= await fetch('https://royal-backend-seller.onrender.com/login',{
+        //     method:'post',
+        //     body:JSON.stringify({email,pass}),
+        //     headers:{
+        //         'content-type':'application/json'
+        //     },
+        // });
+        // result=await result.json();
+
+        if(email==="ashok" && pass==="ashok"){
+            localStorage.setItem("user",JSON.stringify(1));
             navigate('/');
         }else{
             alert("please enter right email or password");
