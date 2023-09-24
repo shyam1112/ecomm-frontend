@@ -9,7 +9,6 @@ function Add() {
     const [company, setcompany] = useState("");
     const [error, serError] = useState(false);
     const [img, setimg] = useState("");
-    const [size, setsize] = useState("");
     const addData = async () => {
 
         if (!name || !price || !category || !company || !img) {
@@ -19,7 +18,7 @@ function Add() {
 
         let result = await fetch('https://royal-backend-seller.onrender.com/addproduct', {
             method: 'post',
-            body: JSON.stringify({ name, price, category, company, img, size,color1,color2,color3 }),
+            body: JSON.stringify({ name, price, category, company, img,color1,color2,color3 }),
             headers: {
                 'content-type': 'application/json'
             },
@@ -31,7 +30,6 @@ function Add() {
         setcategory("");
         setcompany("");
         setimg("");
-        setsize("");
     }
     // function convertTobase64(e){
     //     const reader = new FileReader();
@@ -149,9 +147,6 @@ function Add() {
                 <input className="inputBox" type="text" placeholder="Enter Product company "
                     value={company} onChange={(e) => { setcompany(e.target.value) }} />
                 {error && !company && <span className="invalid-input">Enter valid company</span>}
-
-                <input className="inputBox" type="text" placeholder="Enter Product size "
-                    value={size} onChange={(e) => { setsize(e.target.value) }} />
 
                 <div style={{ display: 'inline-flex', alignItems: 'center',border:"2px solid black" }}>
                     <h2 style={{paddingRight:"20px"}}>Select Color</h2>
