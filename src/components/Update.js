@@ -11,7 +11,7 @@ function Update() {
 
     const params=useParams();
     useEffect(()=>{
-        console.log(params);
+        // console.log(params);
         getData();
     },[]);
 
